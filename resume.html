@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Carlos Zambrano - Resume</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css" />
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+
+    <!--Google Webfonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        color: #444;
+      }
+      .lang-en,
+      .lang-es {
+        display: none;
+      }
+      html[lang="en"] .lang-en,
+      html[lang="es"] .lang-es {
+        display: inline-block;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .resume-header {
+        text-align: center;
+        padding: 3rem 0;
+        background: #44b5ba;
+        color: white;
+        margin-bottom: 2rem;
+        animation: fadeIn 1s ease-in;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        border: 3px solid #fff;
+        transition: transform 0.3s ease;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05);
+      }
+
+      .section {
+        background: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.5s ease-out;
+        border-left: 4px solid #44b5ba;
+      }
+
+      .section h2 {
+        color: #44b5ba;
+        border-bottom: 2px solid #44b5ba;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .experience-item,
+      .education-item,
+      .certification-item,
+      .achievement-item {
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid #44b5ba;
+      }
+
+      .skills-grid,
+      .industries-grid,
+      .languages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .grid-item {
+        background: #f5f6fa;
+        padding: 1rem;
+        border-radius: 4px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+      }
+
+      .grid-item:hover {
+        transform: translateY(-5px);
+        background: #44b5ba;
+        color: white;
+      }
+
+      .strength-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background: #f5f6fa;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .strength-item:hover {
+        background: #44b5ba;
+        color: white;
+      }
+
+      .strength-item i {
+        margin-right: 1rem;
+        color: #44b5ba;
+      }
+
+      .strength-item:hover i {
+        color: white;
+      }
+
+      .language-level {
+        height: 6px;
+        background: #eee;
+        border-radius: 3px;
+        margin-top: 5px;
+      }
+
+      .level-fill {
+        height: 100%;
+        background: #44b5ba;
+        border-radius: 3px;
+        transition: width 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .contact-info a {
+        color: #44b5ba;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #338589;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .skills-grid,
+        .industries-grid,
+        .languages-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!--End of Preloader-->
+
+    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+      <div
+        class="top-border wow fadeInDown animated"
+        style="visibility: visible; animation-name: fadeInDown"
+      ></div>
+      <div
+        class="right-border wow fadeInRight animated"
+        style="visibility: visible; animation-name: fadeInRight"
+      ></div>
+      <div
+        class="bottom-border wow fadeInUp animated"
+        style="visibility: visible; animation-name: fadeInUp"
+      ></div>
+      <div
+        class="left-border wow fadeInLeft animated"
+        style="visibility: visible; animation-name: fadeInLeft"
+      ></div>
+    </div>
+
+    <div id="wrapper">
+      <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+          <div class="row clearfix">
+            <div class="col-1">
+              <!--Logo-->
+              <div id="logo">
+                <!--Logo that is shown on the banner-->
+                <img
+                  src="images/logo.png"
+                  id="banner-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <img
+                  src="images/logo-2.png"
+                  id="navigation-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Navigation Logo-->
+              </div>
+              <!--End of Logo-->
+
+              <aside>
+                <!--Social Icons in Header-->
+                <ul class="social-icons">
+                  <li>
+                    <a
+                      target="_blank"
+                      title="LinkedIn"
+                      href="https://www.linkedin.com/in/ingcarloszamtand"
+                    >
+                      <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      title="Facebook"
+                      href="https://www.facebook.com/krloco78"
+                    >
+                      <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      target="_blank"
+                      title="X"
+                      href="http://www.x.com/carzam27"
+                    >
+                      <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      title="Instagram"
+                      href="http://www.instagram.com/carzamtan"
+                    >
+                      <i class="fa fa-instagram fa-1x"></i
+                      ><span>Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      title="GitHub"
+                      href="https://github.com/carzam27"
+                    >
+                      <i class="fa fa-github fa-1x"></i><span>Github</span>
+                    </a>
+                  </li>
+                </ul>
+                <!--End of Social Icons in Header-->
+              </aside>
+
+              <!--Main Navigation-->
+              <nav id="nav-main">
+                <ul>
+                  <li>
+                    <a href="#banner">
+                      <span class="lang-en">Return to Home</span>
+                      <span class="lang-es">Volver a Inicio</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!--End of Main Navigation-->
+
+              <div id="nav-trigger"><span></span></div>
+              <nav id="nav-mobile"></nav>
+            </div>
+          </div>
+        </div>
+        <!--End of Header-->
+
+        <!--Banner Content-->
+        <div id="banner-content" class="row clearfix">
+          <div class="col-38">
+            <div class="section-heading">
+              <h1>CARLOS ZAMBRANO T</h1>
+              <h2>
+                Business Analyst | Product Owner | Product Analyst | Data Analytics | Process Analyst
+              </h2>
+            </div>
+
+            <!--Call to Action-->
+            <a href="#" class="button">GET IN TOUCH WITH ME</a>
+            <!--End Call to Action-->
+          </div>
+        </div>
+        <!--End of Row-->
+      </header>
+
+      <!--Main Content Area-->
+      <main id="content">
+        <div id="services" class="scrollto clearfix"></div>
+          <div class="row no-padding-bottom clearfix">
+            <!--Content Left Side-->
+            <div class="col-3">
+              <!--User Testimonial-->
+              <blockquote class="testimonial text-right bigtest">
+                <q
+                  >Empowering Business Decisions, Driving Customer-Centric Growth and Innovating Products through Rigorous Data Analysis</q
+                >
+                <footer>— Carlos Z.</footer>
+              </blockquote>
+              <!-- End of Testimonial-->
+            </div>
+            <!--End Content Left Side-->
+
+            <!--Content of the Right Side-->
+            <div class="col-3">
+              <div class="section-heading">
+                <h3>SUMMARY</h3>
+                <h2 class="section-title">Focusing On What Matters Most</h2>
+                <p class="section-subtitle">
+                  As a Business Analyst with proven leadership capabilities, I thrive in dynamic environments that demand adaptability, self-learning, and collaboration. With an unwavering commitment to delivering exceptional outcomes within challenging time constraints, I leverage a quality-centric, results-driven approach to drive process optimization and operational excellence.
+                </p>
+              </div>
+              <p>
+                My ability to foster collaborative partnerships with cross-functional stakeholders, including top executives, has enabled me to spearhead transformative initiatives, resulting in an impressive 80% reduction in process automation times and a remarkable 90% decrease in software incidents. I excel in leading teams, championing change, and driving strategic initiatives that align with organizational goals. 
+              </p>
+              <p>
+                Now, I am eager to leverage my multifaceted skill set and leadership prowess in a stimulating role within your esteemed company, where I can contribute to your continued success while expanding my professional horizons.
+              </p>
+              <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
+            </div>
+            <!--End Content Right Side-->
+
+            <div class="col-3">
+              <img src="images/dancer.jpg" alt="Dancer" />
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!--Footer-->
+      <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix">
+          <p id="copyright" class="col-2">Made by Carlos Zambrano T</p>
+
+          <!--Social Icons in Footer-->
+          <ul class="col-2 social-icons">
+            <li>
+              <a
+                target="_blank"
+                title="LinkedIn"
+                href="https://www.linkedin.com/in/ingcarloszamtand"
+              >
+                <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="Facebook"
+                href="https://www.facebook.com/krloco78"
+              >
+                <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" title="X" href="http://www.x.com/carzam27">
+                <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="Instagram"
+                href="http://www.instagram.com/carzamtan"
+              >
+                <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="GitHub"
+                href="https://github.com/carzam27"
+              >
+                <i class="fa fa-github fa-1x"></i><span>Github</span>
+              </a>
+            </li>
+          </ul>
+          <!--End of Social Icons in Footer-->
+        </div>
+      </footer>
+      <!--End of Footer-->
+    </div>
+
+    <div class="resume-header">
+      <img src="images/profile.jpg" alt="Carlos Zambrano" class="profile-img" />
+      <h1>Carlos Zambrano</h1>
+      <p>Business Analyst | Technology Professional</p>
+    </div>
+
+    <div class="container">
+      <section class="section">
+        <h2>About Me</h2>
+        <p>
+          A passionate Business Analyst with extensive experience in technology
+          and business processes. Committed to delivering innovative solutions
+          and driving business transformation through data-driven insights and
+          strategic thinking.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+          <h3>Senior Business Analyst</h3>
+          <p>Company Name | 2020 - Present</p>
+          <ul>
+            <li>
+              Led cross-functional teams in implementing business solutions
+            </li>
+            <li>
+              Developed and maintained business requirements documentation
+            </li>
+            <li>Conducted stakeholder meetings and gathered requirements</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Certifications & Courses</h2>
+        <div class="certification-item">
+          <h3>Project Management Professional (PMP)</h3>
+          <p>PMI | 2022</p>
+        </div>
+        <div class="certification-item">
+          <h3>Certified Business Analysis Professional (CBAP)</h3>
+          <p>IIBA | 2021</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Key Strengths</h2>
+        <div class="strength-item">
+          <i class="fa fa-check-circle"></i>
+          <p>Strategic Thinking & Problem Solving</p>
+        </div>
+        <div class="strength-item">
+          <i class="fa fa-check-circle"></i>
+          <p>Leadership & Team Management</p>
+        </div>
+        <div class="strength-item">
+          <i class="fa fa-check-circle"></i>
+          <p>Stakeholder Communication</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Key Achievements</h2>
+        <div class="achievement-item">
+          <h3>Process Optimization Project</h3>
+          <p>
+            Led a team that reduced operational costs by 30% through process
+            automation
+          </p>
+        </div>
+        <div class="achievement-item">
+          <h3>Digital Transformation Initiative</h3>
+          <p>
+            Successfully implemented enterprise-wide digital transformation
+            strategy
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Industries Experience</h2>
+        <div class="industries-grid">
+          <div class="grid-item">Financial Services</div>
+          <div class="grid-item">Healthcare</div>
+          <div class="grid-item">Technology</div>
+          <div class="grid-item">Retail</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Languages</h2>
+        <div class="languages-grid">
+          <div class="grid-item">
+            <h3>English</h3>
+            <div class="language-level">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <h3>Spanish</h3>
+            <div class="language-level">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <a href="mailto:your.email@example.com"
+            ><i class="fa fa-envelope"></i> your.email@example.com</a
+          >
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            ><i class="fa fa-linkedin"></i> LinkedIn Profile</a
+          >
+          <p><i class="fa fa-map-marker"></i> Your City, Country</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+      $(document).ready(function () {
+        const languageToggle = $("#language-toggle");
+        const htmlTag = $("html");
+
+        languageToggle.on("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          if (htmlTag.attr("lang") === "en") {
+            htmlTag.attr("lang", "es");
+          } else {
+            htmlTag.attr("lang", "en");
+          }
+          updatePageTitle();
+          updateNavigation();
+
+          // Trigger events that stickyNavbar might be listening to
+          $(window).trigger("resize").trigger("scroll");
+        });
+
+        function updatePageTitle() {
+          const titleElement = $("title");
+          const currentLang = htmlTag.attr("lang");
+          titleElement.text(titleElement.attr(`data-${currentLang}`));
+        }
+
+        function updateNavigation() {
+          // Update navigation text without changing structure
+          $(".header nav a").each(function () {
+            const $this = $(this);
+            const enText = $this.find(".lang-en").text();
+            const esText = $this.find(".lang-es").text();
+            $this.text(htmlTag.attr("lang") === "en" ? enText : esText);
+          });
+        }
+
+        // Error handling
+        window.onerror = function (message, source, lineno, colno, error) {
+          console.log("Error: " + message + " at " + source + ":" + lineno);
+          return true;
+        };
+      });
+    </script>
+  </body>
+</html>
