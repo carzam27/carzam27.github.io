@@ -32,17 +32,6 @@
       type="text/css"
     />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Open Sans", sans-serif;
-        line-height: 1.6;
-        color: #444;
-      }
       .lang-en,
       .lang-es {
         display: none;
@@ -50,177 +39,6 @@
       html[lang="en"] .lang-en,
       html[lang="es"] .lang-es {
         display: inline-block;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      .resume-header {
-        text-align: center;
-        padding: 3rem 0;
-        background: #44b5ba;
-        color: white;
-        margin-bottom: 2rem;
-        animation: fadeIn 1s ease-in;
-      }
-
-      .profile-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-        border: 3px solid #fff;
-        transition: transform 0.3s ease;
-      }
-
-      .profile-img:hover {
-        transform: scale(1.05);
-      }
-
-      .section {
-        background: white;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        animation: slideUp 0.5s ease-out;
-        border-left: 4px solid #44b5ba;
-      }
-
-      .section h2 {
-        color: #44b5ba;
-        border-bottom: 2px solid #44b5ba;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
-      .experience-item,
-      .education-item,
-      .certification-item,
-      .achievement-item {
-        margin-bottom: 1.5rem;
-        padding-left: 1rem;
-        border-left: 3px solid #44b5ba;
-      }
-
-      .skills-grid,
-      .industries-grid,
-      .languages-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-      }
-
-      .grid-item {
-        background: #f5f6fa;
-        padding: 1rem;
-        border-radius: 4px;
-        text-align: center;
-        transition: all 0.3s ease;
-        border: 1px solid #eee;
-      }
-
-      .grid-item:hover {
-        transform: translateY(-5px);
-        background: #44b5ba;
-        color: white;
-      }
-
-      .strength-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-        padding: 0.5rem;
-        background: #f5f6fa;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-      }
-
-      .strength-item:hover {
-        background: #44b5ba;
-        color: white;
-      }
-
-      .strength-item i {
-        margin-right: 1rem;
-        color: #44b5ba;
-      }
-
-      .strength-item:hover i {
-        color: white;
-      }
-
-      .language-level {
-        height: 6px;
-        background: #eee;
-        border-radius: 3px;
-        margin-top: 5px;
-      }
-
-      .level-fill {
-        height: 100%;
-        background: #44b5ba;
-        border-radius: 3px;
-        transition: width 1s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .contact-info a {
-        color: #44b5ba;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .contact-info a:hover {
-        color: #338589;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          padding: 1rem;
-        }
-
-        .skills-grid,
-        .industries-grid,
-        .languages-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-info {
-          flex-direction: column;
-          gap: 1rem;
-          text-align: center;
-        }
       }
     </style>
   </head>
@@ -337,10 +155,13 @@
               <nav id="nav-main">
                 <ul>
                   <li>
-                    <a href="./index.html">
+                    <a href="index.html">
                       <span class="lang-en">Return to Home</span>
                       <span class="lang-es">Volver a Inicio</span>
                     </a>
+                  </li>
+                  <li>
+                    <a href="#" id="language-toggle">EN/ES</a>
                   </li>
                 </ul>
               </nav>
@@ -390,11 +211,11 @@
             <!--End Content Left Side-->
 
             <!--Content of the Right Side-->
-            <div class="col-3">
+            <div class="col-2">
               <div class="section-heading">
                 <h3>SUMMARY</h3>
                 <h2 class="section-title">Focusing On What Matters Most</h2>
-                <p class="section-subtitle">
+                <p class="section">
                   As a Business Analyst with proven leadership capabilities, I thrive in dynamic environments that demand adaptability, self-learning, and collaboration. With an unwavering commitment to delivering exceptional outcomes within challenging time constraints, I leverage a quality-centric, results-driven approach to drive process optimization and operational excellence.
                 </p>
               </div>
@@ -408,15 +229,13 @@
             </div>
             <!--End Content Right Side-->
 
-            <div class="col-3">
-              <img src="images/dancer.jpg" alt="Dancer" />
-            </div>
+
           </div>
         </div>
 
         <!--Achievements-->
         <aside
-          id="testimonials"
+          id="achievements"
           class="scrollto text-center"
           data-enllax-ratio=".2"
         >
@@ -442,7 +261,7 @@
           >
           <footer><b>Data-Driven Decision Enabler</b></footer>
         </blockquote>
-        <!-- End of Testimonial-->
+        <!-- End of Achievements-->
 
         <!--User Testimonial-->
         <blockquote class="col-3 testimonial classic">
@@ -455,7 +274,202 @@
         <!-- End of Testimonial-->
       </div>
     </aside>
-    <!--End of Testimonials-->
+        <!-- End of Achievements-->
+
+           <!--Experience-->
+           <aside
+           id="experience"
+           class="scrollto text-center"
+           data-enllax-ratio=".2"
+         >
+    <div class="row clearfix">
+      <div class="section-heading">
+        <h3>EXPERIENCE              </h3>
+        <h2 class="section-title">COMPANIES WHERE I'VE WORKED</h2>
+      </div>
+      <!-- Company 1 -->
+      <div class="col-1">
+          <div class="text-left">
+              <h2>Globant</h2>
+              <div style="display: flex; justify-content: space-between;">
+                  <h3>Senior Business Analyst/Product Owner</h3>
+                  <div class="text-right">
+                      <h4>Guayaquil, EC (Remote)</h4>
+                      <h5>08/2024 - Now</h5>
+                  </div>
+              </div>
+              
+              <div class="icon-block">
+                  <ul>
+                      <li>Work with Product Manager to deliver features working with Jira & Confluence</li>
+                      <li>Lead the agile ceremonies and explain the sprint backlogs to the team.</li>
+                      <li>Create roadmaps, releases and implementations plans.</li>
+                      <li>Create product specifications in Confluence to support the documentation.</li>
+                      <li>Coordinate with multiples Agile teams' dependencies, new features, releases.</li>
+                      <li>Engagement with Stakeholders to get new functionalities for the project</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+   
+      <!-- Company 2 -->
+      <div class="col-1">
+          <div class="text-left">
+              <h2>Acklen Avenue</h2>
+              <div style="display: flex; justify-content: space-between;">
+                  <h3>Senior Business Analyst/Product Owner</h3>
+                  <div class="text-right">
+                      <h4>Nashville, US (Remote)</h4>
+                      <h5>08/2022 - 08/2024</h5>
+                  </div>
+              </div>
+   
+              <div class="icon-block">
+                  <ul>
+                      <li>Led and coached teams in tribal leadership, fostering growth and development among team members.</li>
+                      <li>Acted as a servant leader across multiple projects, ensuring team and stakeholder needs were prioritized.</li>
+                      <li>Consulted with customer stakeholders to analyze needs, define product requirements, and create solutions enhancing business operations.</li>
+                      <li>Challenged stakeholders to identify the core business problems, ensuring solutions addressed the right issues.</li>
+                      <li>Translated strategic goals and visions into actionable user stories with relevant acceptance criteria.</li>
+                      <li>Gathered and documented functional and non-functional requirements, creating supplemental documentation such as wireframes, design flows, and process maps.</li>
+                      <li>Partnered with technical teams to ensure accurate understanding and implementation of requirements, supporting software configuration and user training as needed.</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+            <!-- Company 3 -->
+            <div class="col-1">
+              <div class="text-left">
+                  <h2>Ecuador Overseas Agencies</h2>
+                  <div style="display: flex; justify-content: space-between;">
+                      <h3>Senior Business Analyst</h3>
+                      <div class="text-right">
+                          <h4>Guayaquil, EC (On Site)</h4>
+                          <h5>01/2024 - 08/2022</h5>
+                      </div>
+                  </div>
+       
+                  <div class="icon-block">
+                      <ul>
+                        <li>Engaged directly with business stakeholders to elicit and document requirements, offering insightful recommendations and facilitating collaboration between design and development teams.</li>
+       
+                        <li>Spearheaded the creation and maintenance of product roadmaps and backlogs, crafting features, epics, and user stories for accurate sizing and estimation with development teams.</li>
+                        
+                        <li>Played a pivotal role in enhancing the Acumatica ERP system in the USA, leading to increased user productivity and faster information delivery on web and mobile platforms.</li>
+                        
+                        <li>Served as an Acumatica ERP trainer across all modules, driving process improvements to streamline operations and boost productivity.</li>
+                        
+                        <li>Identified and acquired new software solutions from local and international providers to introduce cutting-edge technologies within the company.</li>
+                        
+                        <li>Developed information cubes and KPI reports in Oracle Business Intelligence for critical business areas and created an internal system for patient care and integration with medical equipment, as well as an incident recording system for medical equipment with a mobile application.</li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+
+                <!-- Company 4 -->
+      <div class="col-1">
+        <div class="text-left">
+            <h2>Cormin Cia Ltda</h2>
+            <div style="display: flex; justify-content: space-between;">
+                <h3>Senior Developer</h3>
+                <div class="text-right">
+                  <h4>Guayaquil, EC (On Site)</h4>
+                    <h5>06/2011 - 12/2013</h5>
+                </div>
+            </div>
+ 
+            <div class="icon-block">
+                <ul>
+                  <li>Implementing automated database backup systems for heightened information security.</li>
+       
+                  <li>Streamlining and error reduction in the accounting system, focusing on user-friendliness.</li>
+                  
+                  <li>Creating an online order platform, boosting order processing speed by 70% and minimizing manual tasks.</li>
+                  
+                  <li>Offering critical systems and hardware support, resulting in a 30% reduction in incidents.</li>
+                  
+                  <li>Developing a Mini-workflow for seamless order transfer between company departments.</li>
+                  
+                  <li>Designing a commission calculation screen, significantly enhancing the productivity of the commercial department.</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+          <!-- Company 5-->
+          <div class="col-1">
+            <div class="text-left">
+                <h2>CLS - Corporacion Latinoamericana de Software</h2>
+                <div style="display: flex; justify-content: space-between;">
+                  <h3>Junior/Senior Developer</h3>
+                    <div class="text-right">
+                      <h4>Guayaquil, EC (On Site)</h4>
+                        <h5>04/2008 - 08/2010</h5>
+                    </div>
+                </div>
+     
+                <div class="icon-block">
+                    <ul>
+                      <li>Led implementation of new Application Performance Network, improving internet browsing speed and service quality</li>
+       
+                      <li>Redesigned invoicing structures to resolve data inconsistencies and enhance point assignment processes, preventing financial losses</li>
+                      
+                      <li>Optimized IVR Web Application manager structures to improve mobile user experience</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+   </div>
+  </aside>
+          <!-- End of Experience-->
+
+    <!--Strengths-->
+    <aside
+    id="strengths"
+    class="scrollto text-center"
+    data-enllax-ratio=".2"
+  >
+    <div class="row clearfix">
+      <div class="section-heading">
+        <h3>STRENGTHS              </h3>
+        <h2 class="section-title">Key Skills & Areas of Excellence</h2>
+      </div>
+   <blockquote class="col-3 testimonial classic">
+    <img src="images/user-images/user-5.jpg" alt="User" />
+    <q>
+      Translated strategic goals into actionable user stories and requirements, facilitating effective solution implementation and alignment with organizational objectives.
+      </q>
+    <footer><b>Strategic Vision & Execution</b></footer>
+  </blockquote>
+  <!-- End of Testimonial-->
+
+  <!--User Testimonial-->
+  <blockquote class="col-3 testimonial classic">
+    <img src="images/user-images/user-4.jpg" alt="User" />
+    <q
+      >Built strong relationships with stakeholders to challenge assumptions and identify core business problems, ensuring solutions met business needs effectively  </q
+    >
+    <footer><b>Stakeholder Collaboration</b></footer>
+  </blockquote>
+  <!-- End of Testimonial-->
+
+  <!--User Testimonial-->
+  <blockquote class="col-3 testimonial classic">
+    <img src="images/user-images/user-6.jpg" alt="User" />
+    <q
+      >Partnered effectively with technical teams to ensure accurate implementation of requirements, supporting seamless software configuration and user training initiatives.</q
+    >
+    <footer><b>Technical Acumen & Integration</b></footer>
+  </blockquote>
+  <!-- End of Testimonial-->
+</div>
+</aside>
+<!--End of Strengths-->
 
 
 
